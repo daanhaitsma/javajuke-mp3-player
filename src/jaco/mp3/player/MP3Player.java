@@ -592,5 +592,15 @@ public class MP3Player extends JPanel {
     }
     return bb;
   }
+	  
+  public int getPlayingIndex()
+  {
+    return this.playingIndex;
+  }
+  
+  public ArrayList<Object> getPlaylist()
+  {
+    return (ArrayList)this.playlist;
+  }
 
 }
