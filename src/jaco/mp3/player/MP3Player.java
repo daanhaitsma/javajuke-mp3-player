@@ -603,4 +603,18 @@ public class MP3Player extends JPanel {
     return (ArrayList)this.playlist;
   }
 
+  /**
+   * Adds the specified file at the specified position
+   */
+  public MP3Player addAtIndex(int position, File file) {
+
+	  if (file.getName().endsWith(".mp3")) {
+		synchronized (MP3Player.this) {
+			playlist.add(position, file);
+		}
+	  }
+
+	  return this;
+  }
+
 }
