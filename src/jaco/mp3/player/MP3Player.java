@@ -616,5 +616,17 @@ public class MP3Player extends JPanel {
 
 	  return this;
   }
+  
+  public void setPlaylist(File... files) {
+	  
+	// Clear the current playlist
+	playlist.clear();
+	
+	// Add the new files to the playlist
+	for (File file : files) {
+		add(file);
+	}
+	
+  }
 
 }
